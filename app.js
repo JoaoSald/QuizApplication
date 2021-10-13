@@ -20,7 +20,18 @@ form.addEventListener('submit',evento =>{
             score += 25
         }
     })
-    div.querySelector('span').textContent = `${score}%`
+    let count = 0
+
+    scrollTo(0,0)
+
     div.classList.remove('d-none')
+
+   const time = setInterval(()=>{
+        if(count === score){
+            clearInterval(time)
+        }
+        div.querySelector('span').textContent = `${count}%`
+        count++
+    }, 10)
 })
 
