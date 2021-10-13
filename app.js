@@ -1,10 +1,10 @@
 
 const form = document.querySelector('.quiz-form')
+const div = document.querySelector('.result')
 
 const correctAnswers = ['A','B','A','B']
 
 form.addEventListener('submit',evento =>{
-    
     evento.preventDefault()
     let score = 0
 
@@ -20,5 +20,7 @@ form.addEventListener('submit',evento =>{
             score += 25
         }
     })
-    console.log(score)
+    div.querySelector('span').textContent = `${score}%`
+    div.classList.remove('d-none')
 })
+
