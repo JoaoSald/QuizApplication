@@ -21,6 +21,8 @@
       background-color: rgb(245, 63, 63);
       height: 27px;
       color: #ffff;
+      bottom: 0;
+      width: 100%;
     }
 
     footer > p > a {
